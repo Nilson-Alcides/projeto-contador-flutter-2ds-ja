@@ -56,19 +56,21 @@ class _HomePageState extends State<HomePage> {
         child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('Pode entrar',
+          Text(
+            isFull ? 'Lotado' : 'Pode entrar',
           style: TextStyle(
             fontSize: 26,
-            color:  Color.fromARGB(255, 4, 87, 154),
+            color: isFull ? Colors.red :  Color.fromARGB(255, 4, 87, 154),
             fontWeight: FontWeight.w700
           ),
           ),
         
           Padding(padding: EdgeInsets.all(24),
-          child: Text(contador.toString(),
+          child: Text(
+            contador.toString(),
            style: TextStyle(
             fontSize: 26,
-            color:  Color.fromARGB(255, 4, 87, 154),
+            color: isFull ? Colors.red : Color.fromARGB(255, 4, 87, 154),
             fontWeight: FontWeight.w700
           ),
           ),
